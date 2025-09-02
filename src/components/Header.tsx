@@ -17,12 +17,12 @@ const Header = () => {
   }, []);
 
   const services = [
-    { title: "Cyber Security Solutions", href: "#cyber-security" },
-    { title: "Software Development", href: "#software-dev" },
-    { title: "Data Analytics", href: "#data-analytics" },
-    { title: "Cloud Computing", href: "#cloud-computing" },
-    { title: "Digital Transformation", href: "#digital-transformation" },
-    { title: "Finance & IT Consulting", href: "#consulting" },
+    { title: "Cyber Security Solutions", href: "/services/cyber-security" },
+    { title: "Software Development", href: "/services/software-development" },
+    { title: "Data Analytics", href: "/services/data-analytics" },
+    { title: "Cloud Computing", href: "/services/cloud-computing" },
+    { title: "Digital Transformation", href: "/services/digital-transformation" },
+    { title: "Finance & IT Consulting", href: "/services/finance-it-consulting" },
   ];
 
   return (
@@ -44,9 +44,9 @@ const Header = () => {
               <span>info@bitsbytech.com</span>
             </div>
           </div>
-          <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90">
-            Get A Quote
-          </Button>
+              <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" onClick={() => window.location.href = '/#contact'}>
+                Get A Quote
+              </Button>
         </div>
       </div>
 
@@ -104,6 +104,12 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/blog">
+                    Blog
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="#contact">
                     Contact
                   </NavigationMenuLink>
@@ -113,7 +119,7 @@ const Header = () => {
 
             {/* CTA Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
-              <Button className="hidden md:inline-flex bg-gradient-primary hover:bg-primary/90 animate-glow-pulse">
+              <Button className="hidden md:inline-flex bg-gradient-primary hover:bg-primary/90 animate-glow-pulse" onClick={() => window.location.href = '/#contact'}>
                 Get Started
               </Button>
 

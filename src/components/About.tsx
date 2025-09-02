@@ -120,6 +120,68 @@ const About = () => {
           </div>
         </div>
 
+        {/* Team Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Meet the experts driving innovation and excellence at BitsbyTech Labs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Dennis Wambugu",
+                role: "Lead Cybersecurity Engineer",
+                description: "The mastermind behind our technical excellence, innovation and Cyber Security. With a deep understanding of technology trends and a strategic mindset, leads the team in harnessing the power of cutting-edge solutions.",
+              },
+              {
+                name: "Samuel King'ori",
+                role: "Principal Finance & Innovation Engineer",
+                description: "Meet our Principal Innovation and finance manager, the visionary catalyst behind our transformative solutions, driving innovation and guiding our company's growth.",
+              },
+              {
+                name: "Steve Njuguna",
+                role: "Lead Data Analytics Engineer",
+                description: "Meet our Principal Data Engineer, the driving force behind our data-driven solutions and advanced analytics. With deep expertise in data engineering, he leads our team in designing and implementing robust data infrastructure to unlock valuable actionable insights.",
+              },
+              {
+                name: "Adeny Joakim",
+                role: "Principal Software & Technology Architect",
+                description: "The visionary leader behind our cutting-edge technology solutions. With extensive expertise in software architecture and design, he guides our team in shaping the blueprint of our innovative products and services, building scalable, reliable, and future-proof systems that drive business success.",
+              },
+              {
+                name: "Ontegi Kelvin",
+                role: "Senior Sales & Relationship Manager",
+                description: "The driving force behind our sales success and customer satisfaction. With a wealth of experience in technical sales and understanding solutions, effectively delivers the value of our offerings to clients. He is dedicated to understanding customer needs, providing tailored solutions, and building long-lasting relationships.",
+              },
+              {
+                name: "Moses Wanjohi",
+                role: "Senior Project & Analysis Manager",
+                description: "The guiding force behind our project success and seamless execution. With extensive experience in project management and cooporate analysis, he ensures the timely delivery of our solutions with utmost quality. He leads the team, coordinates resources, and ensures smooth collaboration to exceed client expectations.",
+              }
+            ].map((member, index) => (
+              <Card 
+                key={member.name} 
+                className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-primary flex items-center justify-center">
+                    <Users className="h-10 w-10 text-white" />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-2">{member.name}</h4>
+                  <p className="text-primary font-medium mb-3">{member.role}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {member.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center bg-muted/30 rounded-2xl p-12">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
@@ -130,10 +192,10 @@ const About = () => {
             We have a visionary team eager to collaborate and drive transformative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="px-8 bg-gradient-primary">
+            <Button size="lg" className="px-8 bg-gradient-primary" onClick={() => window.location.href = '/#contact'}>
               Request Quote
             </Button>
-            <Button size="lg" variant="outline" className="px-8">
+            <Button size="lg" variant="outline" className="px-8" onClick={() => window.location.href = '/#contact'}>
               Schedule Consultation
             </Button>
           </div>
