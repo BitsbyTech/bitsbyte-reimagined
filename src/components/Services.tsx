@@ -12,6 +12,7 @@ const Services = () => {
       features: ["Vulnerability Assessment", "Penetration Testing", "Threat Intelligence", "Incident Response"],
       color: "text-red-500",
       bgColor: "bg-red-50 dark:bg-red-950/20",
+      href: "/services/cyber-security",
     },
     {
       icon: Code,
@@ -20,6 +21,7 @@ const Services = () => {
       features: ["Web Applications", "Mobile Apps", "API Development", "System Integration"],
       color: "text-blue-500",
       bgColor: "bg-blue-50 dark:bg-blue-950/20",
+      href: "/services/software-development",
     },
     {
       icon: BarChart3,
@@ -28,6 +30,7 @@ const Services = () => {
       features: ["Business Intelligence", "Predictive Analytics", "Data Visualization", "Machine Learning"],
       color: "text-green-500",
       bgColor: "bg-green-50 dark:bg-green-950/20",
+      href: "/services/data-analytics",
     },
     {
       icon: Cloud,
@@ -36,6 +39,7 @@ const Services = () => {
       features: ["Cloud Migration", "Infrastructure Setup", "Scalable Solutions", "Cost Optimization"],
       color: "text-purple-500",
       bgColor: "bg-purple-50 dark:bg-purple-950/20",
+      href: "/services/cloud-computing",
     },
     {
       icon: Zap,
@@ -44,6 +48,7 @@ const Services = () => {
       features: ["Process Automation", "Change Management", "Technology Integration", "Digital Strategy"],
       color: "text-orange-500",
       bgColor: "bg-orange-50 dark:bg-orange-950/20",
+      href: "/services/digital-transformation",
     },
     {
       icon: Calculator,
@@ -52,6 +57,7 @@ const Services = () => {
       features: ["IT Strategy", "Technology Evaluation", "Financial Planning", "ROI Optimization"],
       color: "text-indigo-500",
       bgColor: "bg-indigo-50 dark:bg-indigo-950/20",
+      href: "/services/finance-it-consulting",
     },
   ];
 
@@ -103,7 +109,7 @@ const Services = () => {
                   ))}
                 </div>
                 
-                <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" onClick={() => window.location.href = service.href}>
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -122,10 +128,10 @@ const Services = () => {
               Let's discuss how our expertise can drive your success forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="px-8">
+              <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                 Get Free Consultation
               </Button>
-              <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary" onClick={() => window.location.href = '/projects'}>
                 View Our Portfolio
               </Button>
             </div>

@@ -66,7 +66,7 @@ const FinanceITConsulting = () => {
                 We help organizations make informed decisions that drive growth and maximize ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Strategic Consultation
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
@@ -168,7 +168,7 @@ const FinanceITConsulting = () => {
                     </div>
                   ))}
                 </div>
-                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>
                   Get Strategic Advice
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -246,7 +246,7 @@ const FinanceITConsulting = () => {
                 Get expert advice on how to maximize your technology ROI and drive strategic business value.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/#contact'}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Schedule Strategic Consultation
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">

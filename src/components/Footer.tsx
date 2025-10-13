@@ -112,17 +112,48 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link}>
-                  <a 
-                    href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Our Services
+                </a>
+              </li>
+              <li>
+                <a href="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Terms of Service
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -178,14 +209,14 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center space-x-6 text-sm">
-            <a href="#privacy" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">
               Terms of Service
             </a>
-            <a href="#cookies" className="text-muted-foreground hover:text-primary transition-colors">
-              Cookie Policy
+            <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+              Contact Us
             </a>
           </div>
 

@@ -66,7 +66,7 @@ const DigitalTransformation = () => {
                 We help organizations modernize their processes, technology, and culture for sustainable success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Start Transformation
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
@@ -148,7 +148,7 @@ const DigitalTransformation = () => {
                     </div>
                   ))}
                 </div>
-                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>
                   Begin Transformation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -247,7 +247,7 @@ const DigitalTransformation = () => {
                 Start your digital transformation journey today and unlock new opportunities for growth and innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/#contact'}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Transformation Consultation
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">

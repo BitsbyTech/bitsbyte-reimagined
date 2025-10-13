@@ -66,7 +66,7 @@ const SoftwareDevelopment = () => {
                 creates scalable, efficient solutions tailored to your unique business requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Start Your Project
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
@@ -168,7 +168,7 @@ const SoftwareDevelopment = () => {
                     </div>
                   ))}
                 </div>
-                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -188,10 +188,10 @@ const SoftwareDevelopment = () => {
                 Let's transform your ideas into powerful software solutions that drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/#contact'}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Free Consultation
                 </Button>
-                <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
+                <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary" onClick={() => window.location.href = '/contact'}>
                   Request Quote
                 </Button>
               </div>

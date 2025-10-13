@@ -66,7 +66,7 @@ const CloudComputing = () => {
                 and management services. Build scalable, secure, and cost-effective cloud infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Cloud Assessment
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
@@ -168,7 +168,7 @@ const CloudComputing = () => {
                     </div>
                   ))}
                 </div>
-                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>
                   Start Cloud Journey
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -218,7 +218,7 @@ const CloudComputing = () => {
                 Let our cloud experts help you design and implement a cloud strategy that drives efficiency and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/#contact'}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Free Cloud Assessment
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">

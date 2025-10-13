@@ -61,7 +61,7 @@ const CyberSecurity = () => {
                 Our expert team provides cutting-edge security services tailored to your specific needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Security Assessment
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
@@ -125,7 +125,7 @@ const CyberSecurity = () => {
                     </div>
                   ))}
                 </div>
-                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="mt-8 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>
                   Get Started Today
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -165,7 +165,7 @@ const CyberSecurity = () => {
                 Don't wait for a security breach. Contact our experts today for a comprehensive security assessment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/#contact'}>
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
                   Get Free Security Consultation
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">

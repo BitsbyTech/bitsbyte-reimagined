@@ -44,7 +44,7 @@ const Header = () => {
               <span>info@bitsbytech.com</span>
             </div>
           </div>
-              <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" onClick={() => window.location.href = '/#contact'}>
+              <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" onClick={() => window.location.href = '/contact'}>
                 Get A Quote
               </Button>
         </div>
@@ -69,7 +69,7 @@ const Header = () => {
             <NavigationMenu className="hidden lg:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="#home">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/">
                     Home
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -92,13 +92,13 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="#projects">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/projects">
                     Projects
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="#about">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/about">
                     About
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -110,7 +110,7 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="#contact">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/contact">
                     Contact
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -119,7 +119,7 @@ const Header = () => {
 
             {/* CTA Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
-              <Button className="hidden md:inline-flex bg-gradient-primary hover:bg-primary/90 animate-glow-pulse" onClick={() => window.location.href = '/#contact'}>
+              <Button className="hidden md:inline-flex bg-gradient-primary hover:bg-primary/90 animate-glow-pulse" onClick={() => window.location.href = '/contact'}>
                 Get Started
               </Button>
 
@@ -132,7 +132,7 @@ const Header = () => {
                 </SheetTrigger>
                 <SheetContent side="right">
                   <nav className="flex flex-col space-y-4 mt-4">
-                    <a href="#home" className="text-lg font-medium hover:text-primary">Home</a>
+                    <a href="/" className="text-lg font-medium hover:text-primary">Home</a>
                     <div>
                       <p className="text-lg font-medium mb-2">Services</p>
                       <div className="ml-4 space-y-2">
@@ -143,10 +143,11 @@ const Header = () => {
                         ))}
                       </div>
                     </div>
-                    <a href="#projects" className="text-lg font-medium hover:text-primary">Projects</a>
-                    <a href="#about" className="text-lg font-medium hover:text-primary">About</a>
-                    <a href="#contact" className="text-lg font-medium hover:text-primary">Contact</a>
-                    <Button className="mt-4 bg-gradient-primary">Get Started</Button>
+                    <a href="/projects" className="text-lg font-medium hover:text-primary">Projects</a>
+                    <a href="/about" className="text-lg font-medium hover:text-primary">About</a>
+                    <a href="/blog" className="text-lg font-medium hover:text-primary">Blog</a>
+                    <a href="/contact" className="text-lg font-medium hover:text-primary">Contact</a>
+                    <Button className="mt-4 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>Get Started</Button>
                   </nav>
                 </SheetContent>
               </Sheet>

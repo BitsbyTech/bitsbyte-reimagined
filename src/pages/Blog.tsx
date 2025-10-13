@@ -154,7 +154,7 @@ const Blog = () => {
                       </div>
                     </div>
                     
-                    <Button variant="ghost" className="w-full group hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <Button variant="ghost" className="w-full group hover:bg-primary hover:text-primary-foreground transition-colors" onClick={() => window.open('https://www.linkedin.com/company/bitsbytech-limited/', '_blank')}>
                       Read More
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -228,7 +228,7 @@ const Blog = () => {
                 We'd love to hear what technology topics you'd like us to cover. 
                 Reach out with your suggestions or questions.
               </p>
-              <Button size="lg" className="bg-gradient-primary" onClick={() => window.location.href = '/#contact'}>
+              <Button size="lg" className="bg-gradient-primary" onClick={() => window.location.href = '/contact'}>
                 Contact Our Team
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

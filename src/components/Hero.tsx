@@ -62,14 +62,14 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            <Button size="lg" className="px-8 py-6 text-lg bg-gradient-primary hover:bg-primary/90 shadow-glow group">
+            <Button size="lg" className="px-8 py-6 text-lg bg-gradient-primary hover:bg-primary/90 shadow-glow group" onClick={() => window.location.href = '/contact'}>
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/20 hover:bg-primary/10 group">
+            <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-primary/20 hover:bg-primary/10 group" onClick={() => window.location.href = '/projects'}>
               <Play className="mr-2 h-5 w-5" />
-              Watch Demo
+              View Projects
             </Button>
           </div>
 
