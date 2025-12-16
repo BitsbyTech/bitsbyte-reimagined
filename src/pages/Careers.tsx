@@ -8,7 +8,7 @@ import { Briefcase, MapPin, Clock } from "lucide-react";
 const Careers = () => {
   const positions = [
     {
-      title: "Senior Cybersecurity Engineer",
+      title: "Cybersecurity Engineer",
       department: "Security",
       location: "Nairobi, Kenya",
       type: "Full-time",
