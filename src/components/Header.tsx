@@ -44,9 +44,9 @@ const Header = () => {
               <span>info@bitsbytech.com</span>
             </div>
           </div>
-              <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" onClick={() => window.location.href = '/contact'}>
+              {/* <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" onClick={() => window.location.href = '/contact'}>
                 Get A Quote
-              </Button>
+              </Button> */}
         </div>
       </div>
 
@@ -60,7 +60,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
+                <span className="text-white font-bold text-xl">BBT</span>
               </div>
               <span className="text-xl font-bold">BitsbyTech</span>
             </div>
