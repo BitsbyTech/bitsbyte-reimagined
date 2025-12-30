@@ -67,7 +67,7 @@ const About = () => {
               ))}
             </div>
 
-            <Button size="lg" className="bg-gradient-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-gradient-primary hover:bg-primary/90" onClick={() => window.location.href = '/about'}>
               Learn More About Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

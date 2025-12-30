@@ -212,6 +212,7 @@ const Contact = () => {
                       variant="outline" 
                       size="lg" 
                       className="flex-1 h-12"
+                      onClick={() => document.getElementById('name')?.focus()}
                     >
                       Request Quote
                     </Button>
@@ -250,7 +251,7 @@ const Contact = () => {
                       <span>Monday - Friday: 8:00 AM - 6:00 PM</span>
                     </div>
                   </div>
-                  <Button className="mt-6" variant="outline">
+                  <Button className="mt-6" variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                     Schedule a Visit
                   </Button>
                 </div>
