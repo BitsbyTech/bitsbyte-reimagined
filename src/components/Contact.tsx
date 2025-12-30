@@ -17,13 +17,49 @@ const Contact = () => {
     message: "",
   });
 
+  const openEmailClient = (isQuote: boolean = false) => {
+    const { name, email, subject, message } = formData;
+    
+    // Validate required fields
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      toast({
+        title: "Please fill in all required fields",
+        description: "Name, email, and message are required.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const emailSubject = isQuote 
+      ? `Quote Request from ${name}` 
+      : subject.trim() || `Inquiry from ${name}`;
+    
+    const emailBody = `Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+---
+Sent via BitsbyTech Contact Form`;
+
+    const mailtoLink = `mailto:info@bitsbytech.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    window.open(mailtoLink, '_blank');
+    
+    toast({
+      title: "Email App Opened!",
+      description: "Your message has been prepared. Please click send in your email app.",
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    openEmailClient(false);
+  };
+
+  const handleRequestQuote = () => {
+    openEmailClient(true);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -212,7 +248,7 @@ const Contact = () => {
                       variant="outline" 
                       size="lg" 
                       className="flex-1 h-12"
-                      onClick={() => document.getElementById('name')?.focus()}
+                      onClick={handleRequestQuote}
                     >
                       Request Quote
                     </Button>
