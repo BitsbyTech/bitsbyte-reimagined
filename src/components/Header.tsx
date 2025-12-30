@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
+import { Menu, Phone, Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,12 +59,10 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">BBT</span>
-              </div>
+            <a href="/" className="flex items-center space-x-2">
+              <img src={logo} alt="BitsbyTech Logo" className="h-[65px] w-[40px] object-contain" />
               <span className="text-xl font-bold">BitsbyTech</span>
-            </div>
+            </a>
 
             {/* Desktop Navigation */}
             <NavigationMenu className="hidden lg:flex">
