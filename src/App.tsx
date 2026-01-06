@@ -18,6 +18,7 @@ import CloudComputing from "./pages/services/CloudComputing";
 import DigitalTransformation from "./pages/services/DigitalTransformation";
 import FinanceITConsulting from "./pages/services/FinanceITConsulting";
 import Blog from "./pages/Blog";
+import OurProcess from "./pages/OurProcess";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/our-process" element={<OurProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

@@ -131,6 +131,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/our-process" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  Our Process
+                </a>
+              </li>
+              <li>
                 <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                   Blog
@@ -187,7 +193,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center hover:bg-primary/80 transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
