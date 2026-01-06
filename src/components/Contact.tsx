@@ -45,12 +45,8 @@ Sent via BitsbyTech Contact Form`;
 
     const mailtoLink = `mailto:info@bitsbytech.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
     
-    window.open(mailtoLink, '_blank');
-    
-    toast({
-      title: "Email App Opened!",
-      description: "Your message has been prepared. Please click send in your email app.",
-    });
+    // Use window.location.href for better cross-device compatibility
+    window.location.href = mailtoLink;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
