@@ -3,7 +3,24 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Lock, Eye, AlertTriangle, Users, CheckCircle, ArrowRight, Phone } from "lucide-react";
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  Users, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone,
+  Globe,
+  Smartphone,
+  Cloud,
+  Wifi,
+  Server,
+  Bot,
+  Monitor,
+  Code
+} from "lucide-react";
 
 const CyberSecurity = () => {
   const services = [
@@ -31,6 +48,17 @@ const CyberSecurity = () => {
       description: "Rapid response services to contain, investigate, and recover from security incidents with minimal business disruption.",
       features: ["Emergency Response", "Forensic Analysis", "Recovery Planning", "Post-Incident Review"]
     }
+  ];
+
+  const vaptServices = [
+    { number: "01", title: "Web Application VAPT", icon: Globe, description: "Identify and remediate vulnerabilities in web applications including SQL injection, XSS, and authentication flaws." },
+    { number: "02", title: "Mobile Application VAPT", icon: Smartphone, description: "Security assessment for iOS and Android apps covering data storage, network communication, and authentication." },
+    { number: "03", title: "Cloud Security VAPT", icon: Cloud, description: "Comprehensive testing of cloud infrastructure including AWS, Azure, and GCP configurations." },
+    { number: "04", title: "IoT VAPT", icon: Wifi, description: "Security testing for Internet of Things devices and their communication protocols." },
+    { number: "05", title: "API VAPT", icon: Code, description: "REST and GraphQL API security testing covering authentication, authorization, and data exposure." },
+    { number: "06", title: "Network VAPT", icon: Server, description: "Internal and external network penetration testing to identify infrastructure vulnerabilities." },
+    { number: "07", title: "AI/ML VAPT", icon: Bot, description: "Security assessment for AI and machine learning systems including model poisoning and adversarial attacks." },
+    { number: "08", title: "Desktop Application VAPT", icon: Monitor, description: "Security testing for desktop applications including memory analysis and reverse engineering." }
   ];
 
   const benefits = [
@@ -68,6 +96,64 @@ const CyberSecurity = () => {
                   <Phone className="mr-2 h-5 w-5" />
                   Emergency Response
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* VAPT Services Section */}
+        <section className="py-20 bg-muted/20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">VAPT Services</Badge>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Types of VAPT Services
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Comprehensive Vulnerability Assessment and Penetration Testing across all your digital assets.
+              </p>
+            </div>
+
+            {/* VAPT Grid with Central Icon */}
+            <div className="relative max-w-6xl mx-auto">
+              {/* Central Shield Icon */}
+              <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center shadow-elegant border border-primary/20">
+                  <div className="w-24 h-24 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center">
+                    <Shield className="h-12 w-12 text-primary" />
+                  </div>
+                </div>
+              </div>
+
+              {/* VAPT Services Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {vaptServices.map((service, index) => (
+                  <div 
+                    key={service.title}
+                    className={`group relative ${index >= 4 ? 'lg:col-start-auto' : ''}`}
+                  >
+                    <Card className="h-full hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-primary/10 hover:border-primary/30">
+                      <CardContent className="p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md">
+                              {service.number}
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <service.icon className="h-5 w-5 text-primary" />
+                              <h3 className="font-semibold text-lg">{service.title}</h3>
+                            </div>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {service.description}
+                            </p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
