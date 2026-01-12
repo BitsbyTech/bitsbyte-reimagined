@@ -21,10 +21,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: "Cyber Security Solutions", icon: Shield },
-    { name: "Software Development", icon: Code },
-    { name: "Data Analytics", icon: BarChart3 },
-    { name: "Cloud Computing", icon: Cloud },
+    { name: "Cyber Security Solutions", icon: Shield, href: "/services/cyber-security" },
+    { name: "Software Development", icon: Code, href: "/services/software-development" },
+    { name: "Data Analytics", icon: BarChart3, href: "/services/data-analytics" },
+    { name: "Cloud Computing", icon: Cloud, href: "/services/cloud-computing" },
   ];
 
   const quickLinks = [
@@ -88,7 +88,7 @@ const Footer = () => {
               {services.map((service) => (
                 <li key={service.name}>
                   <a 
-                    href={`#${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={service.href}
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors group"
                   >
                     <service.icon className="h-4 w-4 mr-3 text-primary group-hover:scale-110 transition-transform" />
@@ -100,10 +100,16 @@ const Footer = () => {
             
             <div className="mt-8">
               <h4 className="font-semibold mb-3">Specializations</h4>
-              <div className="space-y-2">
-                <Badge variant="outline" className="mr-2 mb-2">Digital Transformation</Badge>
-                <Badge variant="outline" className="mr-2 mb-2">Finance & IT Consulting</Badge>
-                <Badge variant="outline" className="mr-2 mb-2">API Development</Badge>
+              <div className="flex flex-wrap gap-2">
+                <a href="/services/digital-transformation">
+                  <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors">Digital Transformation</Badge>
+                </a>
+                <a href="/services/finance-it-consulting">
+                  <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors">Finance & IT Consulting</Badge>
+                </a>
+                <a href="/services/software-development">
+                  <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors">API Development</Badge>
+                </a>
               </div>
             </div>
           </div>
