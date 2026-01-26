@@ -18,7 +18,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % backgroundImages.length);
-    }, 3000);
+    }, 4500);
     return () => clearInterval(interval);
   }, [backgroundImages.length]);
 
