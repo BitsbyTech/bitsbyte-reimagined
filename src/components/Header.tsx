@@ -60,7 +60,7 @@ const Header = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <a href="/" className="flex items-center space-x-2">
-              <img src={logo} alt="BitsbyTech Logo" className="h-[65px] w-[40px] object-contain" />
+              <img src={logo} alt="BitsbyTech Logo" className="h-[68px] w-[42px] object-contain" />
               <span className="text-xl font-bold">BitsbyTech Labs LTD</span>
             </a>
 
