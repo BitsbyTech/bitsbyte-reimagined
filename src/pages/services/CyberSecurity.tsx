@@ -130,20 +130,23 @@ const CyberSecurity = () => {
                 {vaptServices.map((service, index) => (
                   <div 
                     key={service.title}
-                    className={`group relative ${index >= 4 ? 'lg:col-start-auto' : ''}`}
+                    className={`group relative animate-fade-in ${index >= 4 ? 'lg:col-start-auto' : ''}`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <Card className="h-full hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-primary/10 hover:border-primary/30">
-                      <CardContent className="p-6">
+                    <Card className="h-full hover:shadow-elegant transition-all duration-500 hover:-translate-y-3 bg-gradient-card border-primary/10 hover:border-primary/30 overflow-hidden">
+                      {/* Animated background effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <CardContent className="p-6 relative z-10">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md">
+                            <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                               {service.number}
                             </div>
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
-                              <service.icon className="h-5 w-5 text-primary" />
-                              <h3 className="font-semibold text-lg">{service.title}</h3>
+                              <service.icon className="h-5 w-5 text-primary transition-transform duration-300 group-hover:scale-110" />
+                              <h3 className="font-semibold text-lg transition-colors duration-300 group-hover:text-primary">{service.title}</h3>
                             </div>
                             <p className="text-sm text-muted-foreground leading-relaxed">
                               {service.description}
