@@ -93,7 +93,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s", color: "#33425b" }}>
-            We specialize in cyber security, software development, data analytics, and cloud computing solutions. 
+            We specialize in , software development, cyber security, data analytics, and cloud computing solutions. 
             Let our visionary team drive transformative results for your business.
           </p>
 
