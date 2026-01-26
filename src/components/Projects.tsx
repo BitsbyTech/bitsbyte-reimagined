@@ -129,18 +129,27 @@ const Projects = () => {
               <div className="mb-16">
                 <h3 className="text-2xl font-bold mb-8 text-center">Featured Projects</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {projects.filter(p => p.featured).map((project) => (
-                    <Card key={project.id} className="group overflow-hidden hover:shadow-elegant transition-all duration-300 bg-gradient-card">
+                  {projects.filter(p => p.featured).map((project, index) => (
+                    <Card key={project.id} className="group overflow-hidden hover:shadow-elegant transition-all duration-500 bg-gradient-card animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
                       <div className="aspect-video bg-muted relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                          <div className="text-center">
+                        {/* Animated gradient background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-accent/15 to-primary/10 animate-pulse" style={{ animationDuration: '4s' }}></div>
+                        {/* Animated floating elements */}
+                        <div className="absolute inset-0 overflow-hidden">
+                          <div className="absolute w-32 h-32 bg-primary/10 rounded-full -top-10 -left-10 animate-float"></div>
+                          <div className="absolute w-24 h-24 bg-accent/10 rounded-full -bottom-6 -right-6 animate-float" style={{ animationDelay: '1s' }}></div>
+                          <div className="absolute w-16 h-16 bg-primary/15 rounded-full top-1/3 right-1/4 animate-float" style={{ animationDelay: '0.5s' }}></div>
+                          <div className="absolute w-20 h-20 bg-accent/10 rounded-full bottom-1/4 left-1/3 animate-float" style={{ animationDelay: '1.5s' }}></div>
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center z-10">
+                          <div className="text-center transform transition-transform duration-300 group-hover:scale-105">
                             <h4 className="text-2xl font-bold text-primary mb-2">{project.title}</h4>
                             <Badge className="bg-primary/20 text-primary border-primary/30">
                               {project.category}
                             </Badge>
                           </div>
                         </div>
-                        <div className="absolute top-4 right-4 flex gap-2">
+                        <div className="absolute top-4 right-4 flex gap-2 z-20">
                           <Button size="icon" variant="secondary" className="h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
                             <ExternalLink className="h-4 w-4" />
                           </Button>
@@ -179,19 +188,27 @@ const Projects = () => {
               {filteredProjects.map((project, index) => (
                 <Card 
                   key={project.id} 
-                  className="group overflow-hidden hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card"
+                  className="group overflow-hidden hover:shadow-card transition-all duration-500 hover:-translate-y-2 bg-gradient-card animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="aspect-video bg-muted relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                      <div className="text-center">
+                    {/* Animated gradient background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 animate-pulse" style={{ animationDuration: '3s' }}></div>
+                    {/* Animated floating elements */}
+                    <div className="absolute inset-0 overflow-hidden">
+                      <div className="absolute w-20 h-20 bg-primary/10 rounded-full -top-5 -left-5 animate-float" style={{ animationDelay: `${index * 0.2}s` }}></div>
+                      <div className="absolute w-16 h-16 bg-accent/10 rounded-full -bottom-3 -right-3 animate-float" style={{ animationDelay: `${index * 0.3}s` }}></div>
+                      <div className="absolute w-12 h-12 bg-primary/15 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: `${index * 0.4}s` }}></div>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                      <div className="text-center transform transition-transform duration-300 group-hover:scale-110">
                         <h4 className="text-lg font-bold text-primary mb-1">{project.title}</h4>
                         <Badge variant="outline" className="border-primary/30 text-primary">
                           {project.category}
                         </Badge>
                       </div>
                     </div>
-                    <div className="absolute top-3 right-3 flex gap-1">
+                    <div className="absolute top-3 right-3 flex gap-1 z-20">
                       <Button size="icon" variant="secondary" className="h-7 w-7 opacity-0 group-hover:opacity-100 transition-opacity">
                         <ExternalLink className="h-3 w-3" />
                       </Button>

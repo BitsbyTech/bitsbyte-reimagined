@@ -115,12 +115,31 @@ const Blog = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
-                <Card key={post.id} className="hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card overflow-hidden">
-                  <div className="aspect-video bg-muted/30 flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <div className="text-4xl mb-2">📝</div>
-                      <p>Blog Image</p>
+              {blogPosts.map((post, index) => (
+                <Card 
+                  key={post.id} 
+                  className="hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 bg-gradient-card overflow-hidden animate-fade-in group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="aspect-video bg-muted/30 relative overflow-hidden">
+                    {/* Animated gradient background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/5"></div>
+                    {/* Animated floating elements */}
+                    <div className="absolute inset-0 overflow-hidden">
+                      <div className="absolute w-20 h-20 bg-primary/10 rounded-full -top-5 -left-5 animate-float" style={{ animationDelay: `${index * 0.2}s` }}></div>
+                      <div className="absolute w-16 h-16 bg-accent/10 rounded-full -bottom-3 -right-3 animate-float" style={{ animationDelay: `${index * 0.3}s` }}></div>
+                      <div className="absolute w-24 h-24 bg-primary/5 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: `${index * 0.15}s` }}></div>
+                    </div>
+                    {/* Category icon */}
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                      <div className="text-center transform transition-transform duration-300 group-hover:scale-110">
+                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2 backdrop-blur-sm">
+                          <span className="text-3xl">📝</span>
+                        </div>
+                        <Badge variant="secondary" className="text-xs">
+                          {post.category}
+                        </Badge>
+                      </div>
                     </div>
                   </div>
                   
@@ -201,14 +220,19 @@ const Blog = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { topic: "AI & Machine Learning", count: "12 Articles" },
-                { topic: "Cloud Security", count: "8 Articles" },
-                { topic: "DevOps", count: "15 Articles" },
-                { topic: "Data Privacy", count: "6 Articles" }
-              ].map((topic) => (
-                <Card key={topic.topic} className="text-center hover:shadow-card transition-all duration-300 cursor-pointer">
+                { topic: "AI & Machine Learning", count: "12 Articles", icon: "🤖" },
+                { topic: "Cloud Security", count: "8 Articles", icon: "🔒" },
+                { topic: "DevOps", count: "15 Articles", icon: "⚙️" },
+                { topic: "Data Privacy", count: "6 Articles", icon: "🛡️" }
+              ].map((topic, index) => (
+                <Card 
+                  key={topic.topic} 
+                  className="text-center hover:shadow-card transition-all duration-500 cursor-pointer hover:-translate-y-2 animate-fade-in group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold mb-2">{topic.topic}</h3>
+                    <div className="text-4xl mb-3 transform transition-transform duration-300 group-hover:scale-125">{topic.icon}</div>
+                    <h3 className="text-lg font-semibold mb-2 transition-colors group-hover:text-primary">{topic.topic}</h3>
                     <p className="text-sm text-muted-foreground">{topic.count}</p>
                   </CardContent>
                 </Card>

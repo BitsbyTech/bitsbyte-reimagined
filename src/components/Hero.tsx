@@ -1,8 +1,27 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, Zap, Shield, Database, Cloud, Code, BarChart3 } from "lucide-react";
+import heroBgNairobi from "@/assets/hero-bg-nairobi.jpg";
+import heroBg1 from "@/assets/hero-bg-1.jpg";
+import heroBgTech from "@/assets/hero-bg-tech.jpg";
 
 const Hero = () => {
+  const [currentBg, setCurrentBg] = useState(0);
+  
+  const backgroundImages = [
+    heroBgNairobi, // Default - Nairobi city
+    heroBg1,       // Tech particles
+    heroBgTech,    // Tech network
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % backgroundImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   const techIcons = [
     { icon: Shield, label: "Security", delay: "0s" },
     { icon: Code, label: "Development", delay: "0.2s" },
@@ -13,7 +32,25 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Sliding Background Images */}
+      {backgroundImages.map((bg, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            currentBg === index ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url(${bg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      ))}
+      
+      {/* Dark Overlay for text readability */}
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]"></div>
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       
@@ -93,6 +130,22 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Background Indicator Dots */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentBg(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              currentBg === index 
+                ? "bg-primary w-6" 
+                : "bg-primary/40 hover:bg-primary/60"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Scroll Indicator */}
