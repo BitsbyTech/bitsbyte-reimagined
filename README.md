@@ -1,22 +1,22 @@
-# Welcome to your Lovable project
+# Welcome to our website project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/16ebd3ca-2bbf-4688-9cf1-9b2bcf63863b
+**URL**: https://bbtl.dev/projects/
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use bbtl website**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/16ebd3ca-2bbf-4688-9cf1-9b2bcf63863b) and start prompting.
+Simply visit the [Project](https://bbtl.dev/projects/) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via  will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in dev.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -59,15 +59,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/16ebd3ca-2bbf-4688-9cf1-9b2bcf63863b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
