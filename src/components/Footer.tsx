@@ -39,10 +39,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/bitsbytech", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com/bitsbytech", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com/bitsbytech", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com/company/bitsbytech", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1AB9bge45m/", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/BitsbyTech?s=20", label: "Twitter/X" },
+    { icon: Instagram, href: "https://www.instagram.com/bitsbytechlabs?igsh=MTRjMTZuczR3M2htaQ==", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/bitsbytech-limited/", label: "LinkedIn" },
   ];
 
   return (
