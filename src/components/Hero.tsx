@@ -49,7 +49,7 @@ const Hero = () => {
       ))}
       
       {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]"></div>
+      <div className="absolute inset-0 bg-background/50"></div>
       
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
