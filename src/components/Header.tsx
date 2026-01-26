@@ -61,7 +61,7 @@ const Header = () => {
             {/* Logo */}
             <a href="/" className="flex items-center space-x-2">
               <img src={logo} alt="BitsbyTech Logo" className="h-[65px] w-[40px] object-contain" />
-              <span className="text-xl font-bold">BitsbyTech labs</span>
+              <span className="text-xl font-bold">BitsbyTech Labs LTD</span>
             </a>
 
             {/* Desktop Navigation */}
