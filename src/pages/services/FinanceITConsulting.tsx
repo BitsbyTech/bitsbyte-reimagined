@@ -246,8 +246,8 @@ const FinanceITConsulting = () => {
                 Get expert advice on how to maximize your technology ROI and drive strategic business value.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.location.href = '/contact'}>
-                  Schedule Strategic Consultation
+                <Button size="lg" variant="secondary" className="px-8" onClick={() => window.open('https://calendar.app.google/vmX5upMwwYhLjdJv8', '_blank')}>
+                  Book a Virtual Meeting
                 </Button>
                 <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white hover:text-primary">
                   Download ROI Calculator

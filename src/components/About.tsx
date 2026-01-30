@@ -195,8 +195,8 @@ const About = () => {
             <Button size="lg" className="px-8 bg-gradient-primary" onClick={() => window.location.href = '/#contact'}>
               Request Quote
             </Button>
-            <Button size="lg" variant="outline" className="px-8" onClick={() => window.location.href = '/#contact'}>
-              Schedule Consultation
+            <Button size="lg" variant="outline" className="px-8" onClick={() => window.open('https://calendar.app.google/vmX5upMwwYhLjdJv8', '_blank')}>
+              Book a Virtual Meeting
             </Button>
           </div>
         </div>

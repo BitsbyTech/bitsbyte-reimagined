@@ -283,8 +283,8 @@ Sent via BitsbyTech Contact Form`;
                       <span>Monday - Friday: 8:00 AM - 6:00 PM</span>
                     </div>
                   </div>
-                  <Button className="mt-6" variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                    Schedule a Visit
+                  <Button className="mt-6" variant="outline" onClick={() => window.open('https://calendar.app.google/vmX5upMwwYhLjdJv8', '_blank')}>
+                    Book a Virtual Meeting
                   </Button>
                 </div>
                 <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
