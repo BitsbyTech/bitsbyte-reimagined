@@ -25,7 +25,7 @@ const About = () => {
     },
     {
       icon: Users,
-      title: "Team of Professionals",
+      title: "Professionalism",
       description: "Our dynamic team brings deep expertise and passion for turning innovative ideas into reality for your business success.",
       color: "text-purple-500",
     },
