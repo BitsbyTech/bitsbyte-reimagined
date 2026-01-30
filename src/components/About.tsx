@@ -133,7 +133,7 @@ const About = () => {
             {[
               {
                 name: "Dennis W.M",
-                role: "Lead Cybersecurity Engineer",
+                role: "Director & Lead Cybersecurity Engineer",
                 description: "The mastermind behind our technical excellence, innovation and Cyber Security. With a deep understanding of technology trends and a strategic mindset, leads the team in harnessing the power of cutting-edge solutions.",
               },
               {
