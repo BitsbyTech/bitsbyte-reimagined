@@ -12,7 +12,7 @@ const About = () => {
       color: "text-green-500",
     },
     {
-      icon: Heart,
+      icon: Cpu,
       title: "Innovation",
       description: "Driving progress through relentless innovation. We pioneer cutting-edge solutions and embrace emerging technologies to shape tomorrow.",
       color: "text-red-500",
