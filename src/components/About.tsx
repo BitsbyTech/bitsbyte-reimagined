@@ -13,8 +13,8 @@ const About = () => {
     },
     {
       icon: Heart,
-      title: "Customer Service",
-      description: "Exceeding expectations with exceptional customer service. We deliver personalized experiences and provide timely support throughout your journey.",
+      title: "Innovation",
+      description: "Driving progress through relentless innovation. We pioneer cutting-edge solutions and embrace emerging technologies to shape tomorrow.",
       color: "text-red-500",
     },
     {
