@@ -153,6 +153,9 @@ const Header = () => {
                     <a href="/about" className="text-lg font-medium hover:text-primary">About</a>
                     <a href="/blog" className="text-lg font-medium hover:text-primary">Blog</a>
                     <a href="/contact" className="text-lg font-medium hover:text-primary">Contact</a>
+                    <Button className="mt-4" variant="outline" onClick={() => window.open('https://calendar.app.google/vmX5upMwwYhLjdJv8', '_blank')}>
+                                        Book a Virtual Meeting
+                                      </Button>
                     <Button className="mt-4 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>Get Started</Button>
                   </nav>
                 </SheetContent>
