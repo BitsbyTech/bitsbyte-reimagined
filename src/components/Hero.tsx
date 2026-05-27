@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Play, Zap, Shield, Database, Cloud, Code, BarChart3 } from "lucide-react";
+import { ArrowRight, Play, Zap } from "lucide-react";
 import heroBgNairobi from "@/assets/hero-bg-nairobi.jpg";
 import heroBg1 from "@/assets/hero-bg-1.jpg";
 import heroBgTech from "@/assets/hero-bg-tech.jpg";
