@@ -121,62 +121,119 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
+        {/* Leadership / Organogram Section */}
         <div className="mb-20">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Meet the experts driving innovation and excellence at BitsbyTech Labs.
+              A structured team of specialists, each leading a department dedicated to delivering value to our clients.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-card rounded-2xl shadow-elegant p-4 md:p-8 mb-12">
+            <img
+              src={organogram}
+              alt="BitsbyTech Labs Limited Organogram showing the Director and department heads"
+              className="w-full h-auto rounded-lg"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="text-center mb-10">
+            <h4 className="text-2xl md:text-3xl font-bold mb-3">How Each Department Serves You</h4>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Every team is built around a clear client outcome — here is what you can expect from each.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                name: "Dennis W.M",
-                role: "Director & Lead Cybersecurity Engineer",
-                description: "The mastermind behind our technical excellence, innovation and Cyber Security. With a deep understanding of technology trends and a strategic mindset, leads the team in harnessing the power of cutting-edge solutions.",
+                icon: Code2,
+                color: "text-blue-500",
+                department: "Development Team",
+                lead: "Led by Adeny Joakim — Principal Software & Tech Architect",
+                points: [
+                  "Custom software, web, and mobile applications tailored to your workflows",
+                  "Scalable, secure system architecture designed to grow with your business",
+                  "Modernization of legacy platforms and API integrations",
+                ],
               },
               {
-                name: "Samuel Wachira",
-                role: "Principal Finance & Innovation Engineer",
-                description: "Meet our Principal Innovation and finance manager, the visionary catalyst behind our transformative solutions, driving innovation and guiding our company's growth.",
+                icon: TrendingUp,
+                color: "text-green-500",
+                department: "Finance Team",
+                lead: "Led by Samuel King'ori — Principal Finance & Innovation Engineer",
+                points: [
+                  "Financial systems advisory and innovation-driven cost optimization",
+                  "Transparent budgeting and ROI planning for every engagement",
+                  "Strategic guidance that aligns technology spend with business growth",
+                ],
               },
               {
-                name: "Steve N. Karanja",
-                role: "Lead Data Analytics Engineer",
-                description: "Meet our Principal Data Engineer, the driving force behind our data-driven solutions and advanced analytics. With deep expertise in data engineering, he leads our team in designing and implementing robust data infrastructure to unlock valuable actionable insights.",
+                icon: Database,
+                color: "text-purple-500",
+                department: "Data Analytics Team",
+                lead: "Led by Steve Njuguna — Lead Data Analytics Engineer",
+                points: [
+                  "Data pipelines, warehousing, and BI dashboards that surface real insights",
+                  "Predictive analytics and reporting tailored to your KPIs",
+                  "Clean, governed data you can confidently base decisions on",
+                ],
               },
               {
-                name: "Adeny .J",
-                role: "Principal Software & Technology Architect",
-                description: "The visionary leader behind our cutting-edge technology solutions. With extensive expertise in software architecture and design, he guides our team in shaping the blueprint of our innovative products and services, building scalable, reliable, and future-proof systems that drive business success.",
+                icon: Handshake,
+                color: "text-orange-500",
+                department: "Sales & Business Development",
+                lead: "Led by Kelvin O.G — Senior Sales & Relationship Manager",
+                points: [
+                  "Clear scoping and consultative solution design from day one",
+                  "Tailored proposals that match your budget and business goals",
+                  "A single point of contact that understands your industry",
+                ],
               },
               {
-                name: "Kelvin O. Geseke",
-                role: "Senior Sales & Relationship Manager",
-                description: "The driving force behind our sales success and customer satisfaction. With a wealth of experience in technical sales and understanding solutions, effectively delivers the value of our offerings to clients. He is dedicated to understanding customer needs, providing tailored solutions, and building long-lasting relationships.",
+                icon: ClipboardCheck,
+                color: "text-teal-500",
+                department: "Projects & Analysis Team",
+                lead: "Led by Moses Wanjohi — Senior Project & Analysis Manager",
+                points: [
+                  "End-to-end project management with clear milestones and timelines",
+                  "Requirements analysis that turns your goals into actionable plans",
+                  "Quality assurance and on-time, on-budget delivery",
+                ],
               },
               {
-                name: "Moses W.M",
-                role: "Senior Project & Analysis Manager",
-                description: "The guiding force behind our project success and seamless execution. With extensive experience in project management and cooporate analysis, he ensures the timely delivery of our solutions with utmost quality. He leads the team, coordinates resources, and ensures smooth collaboration to exceed client expectations.",
-              }
-            ].map((member, index) => (
-              <Card 
-                key={member.name} 
-                className="text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card"
+                icon: ShieldCheck,
+                color: "text-primary",
+                department: "Client Relationship Team",
+                lead: "Led by Ontegi Kelvin — Senior Relationship Manager",
+                points: [
+                  "Dedicated post-delivery support and account management",
+                  "Regular check-ins, performance reviews, and continuous improvement",
+                  "A long-term partnership focused on your evolving needs",
+                ],
+              },
+            ].map((dept, index) => (
+              <Card
+                key={dept.department}
+                className="hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card border-border/50"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-primary flex items-center justify-center">
-                    <Users className="h-10 w-10 text-white" />
+                  <div className="w-14 h-14 mb-4 rounded-full bg-muted/30 flex items-center justify-center">
+                    <dept.icon className={`h-7 w-7 ${dept.color}`} />
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">{member.name}</h4>
-                  <p className="text-primary font-medium mb-3">{member.role}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {member.description}
-                  </p>
+                  <h5 className="text-lg font-semibold mb-1">{dept.department}</h5>
+                  <p className="text-sm text-primary mb-4">{dept.lead}</p>
+                  <ul className="space-y-2">
+                    {dept.points.map((point) => (
+                      <li key={point} className="flex items-start text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
