@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
 
@@ -24,14 +24,23 @@ const Header = () => {
     { title: "Cloud Computing", href: "/services/cloud-computing" },
     { title: "Digital Transformation", href: "/services/digital-transformation" },
     { title: "Finance & IT Consulting", href: "/services/finance-it-consulting" },
+    { title: "Platforms", href: "/platforms" },
+  ];
+
+  const company = [
+    { title: "About Us", href: "/about" },
+    { title: "Projects", href: "/projects" },
+    { title: "Our Process", href: "/our-process" },
+    { title: "Resources", href: "/resources" },
+    { title: "Careers", href: "/careers" },
   ];
 
   return (
     <>
       {/* Top Bar */}
       <div className="bg-secondary text-secondary-foreground py-2 text-sm">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-6">
+        <div className="container mx-auto px-4 flex flex-wrap justify-between items-center gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
             <div className="flex items-center space-x-2">
               <MapPin className="h-4 w-4" />
               <span>BitsbyTech Labs, Nairobi</span>
@@ -45,9 +54,10 @@ const Header = () => {
               <span>info@bitsbytech.com</span>
             </div>
           </div>
-              {/* <Button variant="outline" size="sm" className="bg-primary text-primary-foreground border-primary hover:bg-primary/90" onClick={() => window.location.href = '/contact'}>
-                Get A Quote
-              </Button> */}
+          <div className="flex items-center space-x-2">
+            <Clock className="h-4 w-4" />
+            <span>Open: 09:00am – 05:00pm</span>
+          </div>
         </div>
       </div>
 
@@ -68,17 +78,11 @@ const Header = () => {
             <NavigationMenu className="hidden lg:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground" href="/">
                     Home
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/about">
-                    About
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -86,7 +90,7 @@ const Header = () => {
                       {services.map((service) => (
                         <NavigationMenuLink
                           key={service.title}
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           href={service.href}
                         >
                           <div className="text-sm font-medium leading-none">{service.title}</div>
@@ -97,25 +101,42 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/projects">
-                    Projects
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground" href="/platforms">
+                    Platforms
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/our-process">
-                    Our Process
-                  </NavigationMenuLink>
-                </NavigationMenuItem>                
+                  <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[320px] gap-2 p-4">
+                      {company.map((item) => (
+                        <NavigationMenuLink
+                          key={item.title}
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          href={item.href}
+                        >
+                          <div className="text-sm font-medium">{item.title}</div>
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/blog">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground" href="/partners">
+                    Partners
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground" href="/blog">
                     Blog
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" href="/contact">
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground" href="/contact">
                     Contact
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -135,7 +156,7 @@ const Header = () => {
                     <Menu className="h-6 w-6" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right">
+                <SheetContent side="right" className="overflow-y-auto">
                   <nav className="flex flex-col space-y-4 mt-4">
                     <a href="/" className="text-lg font-medium hover:text-primary">Home</a>
                     <div>
@@ -148,15 +169,28 @@ const Header = () => {
                         ))}
                       </div>
                     </div>
-                    <a href="/projects" className="text-lg font-medium hover:text-primary">Projects</a>
-                    <a href="/our-process" className="text-lg font-medium hover:text-primary">Our Process</a>
-                    <a href="/about" className="text-lg font-medium hover:text-primary">About</a>
+                    <a href="/platforms" className="text-lg font-medium hover:text-primary">Platforms</a>
+                    <div>
+                      <p className="text-lg font-medium mb-2">Company</p>
+                      <div className="ml-4 space-y-2">
+                        {company.map((item) => (
+                          <a key={item.title} href={item.href} className="block text-muted-foreground hover:text-primary">
+                            {item.title}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <a href="/partners" className="text-lg font-medium hover:text-primary">Partners</a>
                     <a href="/blog" className="text-lg font-medium hover:text-primary">Blog</a>
                     <a href="/contact" className="text-lg font-medium hover:text-primary">Contact</a>
+                    <div className="flex items-center space-x-2 pt-2 text-sm text-muted-foreground">
+                      <Clock className="h-4 w-4" />
+                      <span>Open: 09:00am – 05:00pm</span>
+                    </div>
                     <Button className="mt-4 bg-gradient-primary" onClick={() => window.open('https://calendar.app.google/vmX5upMwwYhLjdJv8', '_blank')}>
-                                        Book a Virtual Meeting
-                                      </Button>
-                    <Button className="mt-4 bg-gradient-primary" onClick={() => window.location.href = '/contact'}>Get Started</Button>
+                      Book a Virtual Meeting
+                    </Button>
+                    <Button className="bg-gradient-primary" onClick={() => window.location.href = '/contact'}>Get Started</Button>
                   </nav>
                 </SheetContent>
               </Sheet>
