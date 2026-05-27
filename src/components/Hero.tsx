@@ -22,14 +22,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [backgroundImages.length]);
 
-  const techIcons = [
-    { icon: Shield, label: "Security", delay: "0s" },
-    { icon: Code, label: "Development", delay: "0.2s" },
-    { icon: Database, label: "Analytics", delay: "0.4s" },
-    { icon: Cloud, label: "Cloud", delay: "0.6s" },
-    { icon: BarChart3, label: "Insights", delay: "0.8s" },
-    { icon: Zap, label: "Performance", delay: "1s" },
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -54,24 +46,6 @@ const Hero = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       
-      {/* Floating Tech Icons */}
-      <div className="absolute inset-0 overflow-hidden">
-        {techIcons.map((item, index) => (
-          <div
-            key={item.label}
-            className="absolute animate-float"
-            style={{
-              left: `${15 + (index * 15)}%`,
-              top: `${20 + (index % 3) * 25}%`,
-              animationDelay: item.delay,
-            }}
-          >
-            <div className="p-4 bg-card/20 backdrop-blur-sm rounded-full border border-border/20">
-              <item.icon className="h-6 w-6 text-primary" />
-            </div>
-          </div>
-        ))}
-      </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
