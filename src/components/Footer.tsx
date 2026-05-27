@@ -10,6 +10,7 @@ import {
   MapPin, 
   Phone, 
   Mail, 
+  Clock,
   ArrowRight,
   Shield,
   Code,
@@ -77,6 +78,10 @@ const Footer = () => {
               <div className="flex items-center text-sm">
                 <Mail className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
                 <span>info@bitsbytech.com</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <Clock className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                <span>Open: 09:00am – 05:00pm</span>
               </div>
             </div>
           </div>

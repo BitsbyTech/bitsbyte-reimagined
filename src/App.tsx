@@ -20,6 +20,9 @@ import DigitalTransformation from "./pages/services/DigitalTransformation";
 import FinanceITConsulting from "./pages/services/FinanceITConsulting";
 import Blog from "./pages/Blog";
 import OurProcess from "./pages/OurProcess";
+import Platforms from "./pages/Platforms";
+import Partners from "./pages/Partners";
+import Resources from "./pages/Resources";
 
 const queryClient = new QueryClient();
 
@@ -45,7 +48,9 @@ const App = () => (
           <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/services/finance-it-consulting" element={<FinanceITConsulting />} />
           <Route path="/blog" element={<Blog />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/platforms" element={<Platforms />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
