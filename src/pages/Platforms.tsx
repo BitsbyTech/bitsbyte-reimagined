@@ -150,6 +150,20 @@ const Platforms = () => {
     },
   ];
 
+  const industries = [
+    { icon: Landmark, title: "Financial Services", body: "Compliance, risk and data security for banks, insurers, SACCOs and fintechs." },
+    { icon: HeartPulse, title: "Healthcare", body: "Patient data protection, HIPAA/DPA alignment and clinical system resilience." },
+    { icon: Cpu, title: "Technology", body: "Security posture and SOC 2 readiness for SaaS, cloud and platform businesses." },
+    { icon: Zap, title: "Energy & Utilities", body: "Critical infrastructure security and regulatory compliance across generation and distribution." },
+    { icon: ShoppingBag, title: "Retail & E-commerce", body: "Transaction data protection, PCI DSS and customer privacy at scale." },
+    { icon: Building2, title: "Government", body: "Public sector compliance, citizen data protection and secure digital services." },
+    { icon: Factory, title: "Manufacturing", body: "OT/IT convergence security and supply chain risk management." },
+    { icon: GraduationCap, title: "Education", body: "Student data protection and institutional compliance for schools and universities." },
+    { icon: Radio, title: "Telecommunications", body: "Network compliance, subscriber data protection and CA-aligned controls." },
+    { icon: Flame, title: "Oil & Gas", body: "OT/IT security across upstream, midstream and downstream operations." },
+    { icon: Scale, title: "Legal Services", body: "Client data protection, privilege management and matter confidentiality." },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
