@@ -14,6 +14,17 @@ import {
   Settings2,
   Users,
   Workflow,
+  Landmark,
+  HeartPulse,
+  Cpu,
+  Zap,
+  ShoppingBag,
+  Building2,
+  Factory,
+  GraduationCap,
+  Radio,
+  Flame,
+  Scale,
 } from "lucide-react";
 
 const Platforms = () => {
