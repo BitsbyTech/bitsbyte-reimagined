@@ -14,6 +14,17 @@ import {
   Settings2,
   Users,
   Workflow,
+  Landmark,
+  HeartPulse,
+  Cpu,
+  Zap,
+  ShoppingBag,
+  Building2,
+  Factory,
+  GraduationCap,
+  Radio,
+  Flame,
+  Scale,
 } from "lucide-react";
 
 const Platforms = () => {
@@ -137,6 +148,20 @@ const Platforms = () => {
       title: "Evolve",
       body: "We monitor, refine and mature your posture as your business, regulations and threats change.",
     },
+  ];
+
+  const industries = [
+    { icon: Landmark, title: "Financial Services", body: "Compliance, risk and data security for banks, insurers, SACCOs and fintechs." },
+    { icon: HeartPulse, title: "Healthcare", body: "Patient data protection, HIPAA/DPA alignment and clinical system resilience." },
+    { icon: Cpu, title: "Technology", body: "Security posture and SOC 2 readiness for SaaS, cloud and platform businesses." },
+    { icon: Zap, title: "Energy & Utilities", body: "Critical infrastructure security and regulatory compliance across generation and distribution." },
+    { icon: ShoppingBag, title: "Retail & E-commerce", body: "Transaction data protection, PCI DSS and customer privacy at scale." },
+    { icon: Building2, title: "Government", body: "Public sector compliance, citizen data protection and secure digital services." },
+    { icon: Factory, title: "Manufacturing", body: "OT/IT convergence security and supply chain risk management." },
+    { icon: GraduationCap, title: "Education", body: "Student data protection and institutional compliance for schools and universities." },
+    { icon: Radio, title: "Telecommunications", body: "Network compliance, subscriber data protection and CA-aligned controls." },
+    { icon: Flame, title: "Oil & Gas", body: "OT/IT security across upstream, midstream and downstream operations." },
+    { icon: Scale, title: "Legal Services", body: "Client data protection, privilege management and matter confidentiality." },
   ];
 
   return (
@@ -305,6 +330,44 @@ const Platforms = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Industries */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <Badge variant="outline" className="mb-4">Industries We Serve</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Deep context across regulated sectors
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                We work across industries with distinct regulatory, operational and data realities — and bring that context into every engagement.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {industries.map((ind) => (
+                <Card
+                  key={ind.title}
+                  className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-border/50"
+                >
+                  <CardContent className="p-6 flex gap-4">
+                    <div className="w-11 h-11 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <ind.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">{ind.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{ind.body}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground mt-10">
+              Not seeing your industry? We've delivered for organisations beyond this list — <a href="/contact" className="text-primary hover:underline">tell us about yours</a>.
+            </p>
           </div>
         </section>
 
