@@ -333,6 +333,44 @@ const Platforms = () => {
           </div>
         </section>
 
+        {/* Industries */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <Badge variant="outline" className="mb-4">Industries We Serve</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Deep context across regulated sectors
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                We work across industries with distinct regulatory, operational and data realities — and bring that context into every engagement.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {industries.map((ind) => (
+                <Card
+                  key={ind.title}
+                  className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-border/50"
+                >
+                  <CardContent className="p-6 flex gap-4">
+                    <div className="w-11 h-11 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <ind.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">{ind.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{ind.body}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground mt-10">
+              Not seeing your industry? We've delivered for organisations beyond this list — <a href="/contact" className="text-primary hover:underline">tell us about yours</a>.
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-20">
           <div className="container mx-auto px-4">
