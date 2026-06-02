@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Handshake, TrendingUp, Globe2, ShieldCheck } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import LogoMarquee from "@/components/LogoMarquee";
 
 const Partners = () => {
   const [form, setForm] = useState({
@@ -98,54 +99,9 @@ const Partners = () => {
         </section>
 
         {/* Logo Marquee */}
-        <section className="py-10 bg-background border-y">
-          <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
-            Industries & Technologies We Work With
-          </p>
-          <div className="relative overflow-hidden h-[2cm] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-            <div className="absolute inset-0 flex items-center gap-12 animate-[marquee_45s_linear_infinite] whitespace-nowrap will-change-transform">
-              {[...Array(2)].map((_, copy) => (
-                <div key={copy} className="flex items-center gap-12 shrink-0">
-                  {[
-                    // Banking & Finance
-                    "Absa",
-                    // Cyber Security
-                    "Cisco", "Fortinet", "Palo Alto Networks", "CrowdStrike", "Splunk", "Sophos", "Kaspersky", "Tenable", "Rapid7", "Cloudflare", "SentinelOne", "Trend Micro",
-                    // Cloud & Infrastructure
-                    "Microsoft", "AWS", "Google Cloud", "Oracle", "IBM", "VMware", "Red Hat",
-                    // Software Development
-                    "GitHub", "GitLab", "Atlassian", "Docker", "MongoDB", "Node.js",
-                    // Data & Analytics
-                    "Snowflake", "Databricks", "Tableau", "Power BI", "Elastic",
-                    // Enterprise / Finance Systems
-                    "SAP", "Salesforce", "ServiceNow", "Sage", "QuickBooks",
-                    // Telecommunications
-                    "Safaricom", "Airtel",
-                    // Healthcare
-                    "Aga Khan Hospital",
-                    // Energy & Oil
-                    "KenGen", "Kenya Power", "TotalEnergies", "Shell", "Vivo Energy",
-                    // Retail / Manufacturing / Education
-                    "Naivas", "Carrefour", "EABL", "Bidco", "University of Nairobi",
-                  ].map((name) => (
-                    <span
-                      key={`${copy}-${name}`}
-                      className="text-xl md:text-2xl font-semibold text-foreground/70 grayscale hover:grayscale-0 hover:text-foreground transition-all tracking-tight"
-                    >
-                      {name}
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-          <style>{`
-            @keyframes marquee {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-          `}</style>
-        </section>
+        <LogoMarquee />
+
+
 
 
 
