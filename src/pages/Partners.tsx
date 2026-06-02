@@ -108,17 +108,25 @@ const Partners = () => {
                 <div key={copy} className="flex items-center gap-12 shrink-0">
                   {[
                     // Banking & Finance
-                    "Absa", "Equity Bank", "KCB", "Standard Chartered", "Stanbic Bank", "NCBA", "Co-operative Bank", "DTB", "I&M Bank", "Citi",
-                    // Telco
-                    "Safaricom", "Airtel",
-                    // Cloud & Tech
-                    "Microsoft", "AWS", "Google Cloud", "Oracle", "IBM", "SAP", "Salesforce", "ServiceNow", "VMware", "Red Hat",
+                    "Absa",
                     // Cyber Security
-                    "Cisco", "Fortinet", "Palo Alto Networks", "CrowdStrike", "Splunk", "Kaspersky", "Sophos", "Tenable", "Rapid7", "Cloudflare",
-                    // Energy
+                    "Cisco", "Fortinet", "Palo Alto Networks", "CrowdStrike", "Splunk", "Sophos", "Kaspersky", "Tenable", "Rapid7", "Cloudflare", "SentinelOne", "Trend Micro",
+                    // Cloud & Infrastructure
+                    "Microsoft", "AWS", "Google Cloud", "Oracle", "IBM", "VMware", "Red Hat",
+                    // Software Development
+                    "GitHub", "GitLab", "Atlassian", "Docker", "MongoDB", "Node.js",
+                    // Data & Analytics
+                    "Snowflake", "Databricks", "Tableau", "Power BI", "Elastic",
+                    // Enterprise / Finance Systems
+                    "SAP", "Salesforce", "ServiceNow", "Sage", "QuickBooks",
+                    // Telecommunications
+                    "Safaricom", "Airtel",
+                    // Healthcare
+                    "Aga Khan Hospital",
+                    // Energy & Oil
                     "KenGen", "Kenya Power", "TotalEnergies", "Shell", "Vivo Energy",
-                    // Retail / Manufacturing / Healthcare / Education
-                    "Naivas", "Carrefour", "EABL", "Bidco", "Aga Khan Hospital", "University of Nairobi",
+                    // Retail / Manufacturing / Education
+                    "Naivas", "Carrefour", "EABL", "Bidco", "University of Nairobi",
                   ].map((name) => (
                     <span
                       key={`${copy}-${name}`}
