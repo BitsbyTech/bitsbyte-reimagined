@@ -97,6 +97,50 @@ const Partners = () => {
           </div>
         </section>
 
+        {/* Logo Marquee */}
+        <section className="py-10 bg-background border-y">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
+            Industries & Technologies We Work With
+          </p>
+          <div className="relative overflow-hidden h-[2cm] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="absolute inset-0 flex items-center gap-12 animate-[marquee_45s_linear_infinite] whitespace-nowrap will-change-transform">
+              {[...Array(2)].map((_, copy) => (
+                <div key={copy} className="flex items-center gap-12 shrink-0">
+                  {[
+                    // Banking & Finance
+                    "Absa", "Equity Bank", "KCB", "Standard Chartered", "Stanbic Bank", "NCBA", "Co-operative Bank", "DTB", "I&M Bank", "Citi",
+                    // Telco
+                    "Safaricom", "Airtel",
+                    // Cloud & Tech
+                    "Microsoft", "AWS", "Google Cloud", "Oracle", "IBM", "SAP", "Salesforce", "ServiceNow", "VMware", "Red Hat",
+                    // Cyber Security
+                    "Cisco", "Fortinet", "Palo Alto Networks", "CrowdStrike", "Splunk", "Kaspersky", "Sophos", "Tenable", "Rapid7", "Cloudflare",
+                    // Energy
+                    "KenGen", "Kenya Power", "TotalEnergies", "Shell", "Vivo Energy",
+                    // Retail / Manufacturing / Healthcare / Education
+                    "Naivas", "Carrefour", "EABL", "Bidco", "Aga Khan Hospital", "University of Nairobi",
+                  ].map((name) => (
+                    <span
+                      key={`${copy}-${name}`}
+                      className="text-xl md:text-2xl font-semibold text-foreground/70 grayscale hover:grayscale-0 hover:text-foreground transition-all tracking-tight"
+                    >
+                      {name}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+          <style>{`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+          `}</style>
+        </section>
+
+
+
         {/* Form */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4 max-w-3xl">
