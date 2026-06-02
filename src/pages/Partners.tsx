@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Handshake, TrendingUp, Globe2, ShieldCheck } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import LogoMarquee from "@/components/LogoMarquee";
 
 const Partners = () => {
   const [form, setForm] = useState({
